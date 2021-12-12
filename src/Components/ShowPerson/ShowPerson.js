@@ -52,7 +52,7 @@ const ShowPerson = () => {
 
     const [persons, setPersons] = React.useState([])
     React.useEffect(() => {
-        fetch('http://localhost:5000/persons')
+        fetch('https://intense-falls-80420.herokuapp.com/persons')
             .then(res => res.json())
             .then(data => {
                 setPersons(data)
@@ -64,7 +64,7 @@ const ShowPerson = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/persons/${id}`;
+            const url = `https://intense-falls-80420.herokuapp.com/persons/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

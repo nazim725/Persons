@@ -37,7 +37,7 @@ const AddPerson = ({ openBooking, handleBookingClose, setBookingSuccess }) => {
         const newPerson = { name, phone, email, hobbies, }
 
 
-        fetch('http://localhost:5000/persons', {
+        fetch('https://intense-falls-80420.herokuapp.com/persons', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -59,7 +59,7 @@ const AddPerson = ({ openBooking, handleBookingClose, setBookingSuccess }) => {
 
 
 
-  
+
 
     return (
         <Modal
@@ -76,65 +76,65 @@ const AddPerson = ({ openBooking, handleBookingClose, setBookingSuccess }) => {
             <Fade in={openBooking}>
                 <Box sx={style}>
                     <Typography id="transition-modal-title" variant="h6" component="h2">
-                        
+
                     </Typography>
                     <form onSubmit={handleAddPerson}>
-                    <h2 className="Products-heading">Add a Person</h2>
-                    <TextField
-                        sx={{ width: '90%', m: 1 ,input: { color: 'green' }}}
-                        id="outlined-size-small"
-                        inputRef={nameRef}
-                        label="Name"
-                        variant="standard"
-                        className='input-field'
-                        InputLabelProps={{
-                            style: { color: 'blue', paddingLeft: '10px' }
-                        }}
-                        required
-                    />
-                    <TextField
-                        sx={{ width: '90%', m: 1,input: { color: 'green' } }}
-                        id="outlined-size-small"
-                        inputRef={phoneRef}
-                        label="Phone"
-                        variant="standard"
-                        className='input-field'
-                        InputLabelProps={{
-                            style: { color: 'blue', paddingLeft: '10px' }
-                        }}
-                        required
-                    />
-                    <TextField
-                        sx={{ width: '90%', m: 1,input: { color: 'green' } }}
-                        id="outlined-size-small"
-                        inputRef={emailRef}
-                        label="Email"
-                        type="email"
-                        variant="standard"
-                        className='input-field'
-                        InputLabelProps={{
-                            style: { color: 'blue', paddingLeft: '10px' }
-                        }}
-                        required
-                    />
-                    <TextField
-                        sx={{ width: '90%', m: 1 ,input: { color: 'green' }}}
-                        id="outlined-size-small"
-                        inputRef={hobbiesRef}
-                        label="Hobbies"
-                        variant="standard"
-                        className='input-field'
-                        InputLabelProps={{
-                            style: { color: 'blue', paddingLeft: '10px' }
-                        }}
-                        required
-                    />
+                        <h2 className="Products-heading">Add a Person</h2>
+                        <TextField
+                            sx={{ width: '90%', m: 1, input: { color: 'green' } }}
+                            id="outlined-size-small"
+                            inputRef={nameRef}
+                            label="Name"
+                            variant="standard"
+                            className='input-field'
+                            InputLabelProps={{
+                                style: { color: 'blue', paddingLeft: '10px' }
+                            }}
+                            required
+                        />
+                        <TextField
+                            sx={{ width: '90%', m: 1, input: { color: 'green' } }}
+                            id="outlined-size-small"
+                            inputRef={phoneRef}
+                            label="Phone"
+                            variant="standard"
+                            className='input-field'
+                            InputLabelProps={{
+                                style: { color: 'blue', paddingLeft: '10px' }
+                            }}
+                            required
+                        />
+                        <TextField
+                            sx={{ width: '90%', m: 1, input: { color: 'green' } }}
+                            id="outlined-size-small"
+                            inputRef={emailRef}
+                            label="Email"
+                            type="email"
+                            variant="standard"
+                            className='input-field'
+                            InputLabelProps={{
+                                style: { color: 'blue', paddingLeft: '10px' }
+                            }}
+                            required
+                        />
+                        <TextField
+                            sx={{ width: '90%', m: 1, input: { color: 'green' } }}
+                            id="outlined-size-small"
+                            inputRef={hobbiesRef}
+                            label="Hobbies"
+                            variant="standard"
+                            className='input-field'
+                            InputLabelProps={{
+                                style: { color: 'blue', paddingLeft: '10px' }
+                            }}
+                            required
+                        />
 
 
 
 
-                    <Button sx={{ width: '90%', m: 1 }} type="submit" variant="contained">Save</Button>
-                </form>
+                        <Button sx={{ width: '90%', m: 1 }} type="submit" variant="contained">Save</Button>
+                    </form>
                 </Box>
             </Fade>
         </Modal>

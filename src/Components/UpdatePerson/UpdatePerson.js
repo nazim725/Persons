@@ -12,7 +12,7 @@ const UpdatePerson = () => {
     console.log(personId)
     const [person, setPerson] = useState({});
 
-    const url = `http://localhost:5000/persons/${personId}`
+    const url = `https://intense-falls-80420.herokuapp.com/persons/${personId}`
     console.log(url)
     useEffect(() => {
         fetch(url)
@@ -25,7 +25,7 @@ const UpdatePerson = () => {
 
 
     const handleUpdateProduct = e => {
-        const url = `http://localhost:5000/persons/${personId}`;
+        const url = `https://intense-falls-80420.herokuapp.com/persons/${personId}`;
         console.log(url)
         fetch(url, {
             method: 'PUT',
